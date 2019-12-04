@@ -131,7 +131,7 @@ function MainPage() {
           <div className="col-md-6 col-sm-12 box" style={{marginTop: "100px"}}>
             <img src="/banner2.jpg" className="img-fluid" />    
           </div>
-          <div className="col-md-6 col-sm-12 p-0" style={{marginTop: "100px"}}>
+          <div className="col-md-6 col-sm-12" style={{marginTop: "100px"}}>
             <div className="inner" style={{height:"340px"}}>
               <h6>Work With Us</h6>
               <h3 className="h3-responsive font-weight-bold">Join Our Community of qualified professionals</h3>

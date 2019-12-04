@@ -57,7 +57,7 @@ export default function QualityPage() {
 
 					<div className="row" style={{ marginTop: "30px" }}>
 						<div className="col-md-8">
-							<h4 className="our-pro font-weight-bold p-5">{quality.message}</h4>
+	<h4 className="our-pro font-weight-bold p-5 who-we-are-heading" style={{lineHeight:'1.5em' , fontSize:'30px'}} >{quality.message.replace('hight-quality construction', ()=> `<span>Hamza</span>`)}</h4>
 						</div>
 						<div className="col-md-4">
 

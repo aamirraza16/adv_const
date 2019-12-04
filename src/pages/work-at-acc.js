@@ -27,7 +27,7 @@ function WorkAtAccPage(props) {
           <div className="row contactUs-text-container">
             <div className="col-md-4 mr-md-auto col-sm-12">
               <div className="contactUs-text">
-                <h4 className="h3-responsive">
+                <h4 className="h3-responsive who-we-are-heading font-weight-bold" style={{fontSize:'30px'}}>
                   We are always looking for
                   <br />new talents</h4>
          
@@ -81,7 +81,7 @@ function WorkAtAccPage(props) {
             <div className="col-md-6 col-sm-12 box" style={{ marginTop: '100px' }}>
               <div className="inner" style={{ height: '374px', background: '#FFFDFD' }}>
                 <h6>Team</h6>
-                <h3 className="h3-responsive font-weight-bold">Get to know us a little</h3>
+                <h3 className="h3-responsive who-we-are-heading font-weight-bold">Get to know us a little</h3>
                 <p>
                   Get the know the team of professionals behind
                   <br />

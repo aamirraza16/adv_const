@@ -15,6 +15,14 @@ body{
 
 }
 
+@font-face {
+    font-family: 'NationWeb';
+    src:    url('./fonts/NationalWeb-Medium.eot') format('embedded-opentype'),
+            url('./fonts/NationalWeb-Medium.woff2') format('woff2'),
+            url('./fonts/NationalWeb-Medium.woff') format('woff');
+
+}
+
 
 h1,h2,h3,h4,h5,h6{ font-family: 'FoundersGroteskWeb-Regular';  }
 
@@ -204,9 +212,9 @@ h6{
     background: #fff;
 }
 
-.box{
+/* .box{
     padding: 0 10px 0 0;
-}
+} */
 
 .inner{
     background-color: #fff;
@@ -700,4 +708,9 @@ section{
     padding: 0px !important;
     color: rgba(0,0,0,.9) !important;
     height: 90px !important;
+}
+
+
+.who-we-are-heading{
+    font-family: 'NationWeb' !important;
 }

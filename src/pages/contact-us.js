@@ -17,13 +17,13 @@ const ContactUsPage = () => {
     	<div class="container">
     		<div class="row contactUs-text-container">
     			<div class="col-md-6 col-sm-12 contactInfo">
-    			    <h3 class="h3-responsive font-weight-bold aboutus">Contact Us</h3>
-    			    <p>INQUIRIES<br />
-    			     <a href="mailto:projects@advanceconstruction.com.sa" class="contactEmail">{contact ? contact.email: null}</a>
+    			    <h3 class="h3-responsive font-weight-bold aboutus who-we-are-heading">Contact Us</h3>
+    			    <p className='who-we-are-heading'>INQUIRIES<br />
+    			     <a href="mailto:projects@advanceconstruction.com.sa" class="contactEmail who-we-are-heading">{contact ? contact.email: null}</a>
     			    </p>
-    			    <p>PHONE NUMBERS</p>
+    			    <p className='who-we-are-heading'>PHONE NUMBERS</p>
 					{contact ? contact.phone.map(cell => (<p>{cell}</p>)) : null}
-    			    <p>ADDRESS<br />
+    			    <p  class="who-we-are-heading">ADDRESS<br />
 					{contact ? contact.address: null}
     			    </p>
     			</div>

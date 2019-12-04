@@ -22,8 +22,8 @@ function TeamPage() {
                     <div key={team.id} className='row mt-3' >
                         <div className='col-sm col-md-6' >
                             <div className='team-member-description bg-white p-4' >
-                                <h6 className='font-weight-bold' >{team.designation}</h6>
-                                <h3 className='font-weight-bold' >{team.name}</h3>
+                                <h6 className='font-weight-bold who-we-are-heading' style={{fontSize:'20px'}} >{team.designation}</h6>
+                                <h3 className='font-weight-bold who-we-are-heading' style={{fontSize:'35px'}} >{team.name}</h3>
                                 <p>{team.description}</p>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ function TeamPage() {
                         <div className="col-md-6 col-sm-12" style={{marginTop: "20px"}}>
                             <div className="inner"> 
                                 <h6>Team</h6>
-                                <h3 className="h3-responsive">Delivering agile solutions to<br />complex projects</h3>
+                                <h3 className="h3-responsive who-we-are-heading">Delivering agile solutions to<br />complex projects</h3>
                                 <a href="#">Learn about our work</a>
                             </div>
                         </div>
