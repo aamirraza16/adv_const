@@ -20,7 +20,7 @@ export default function QualityPage() {
 						<div className="col-md-12 col-sm-12">
 							<h3 className="h3-responsive aboutus font-weight-bold">{quality.title}</h3>
 							<img src={quality.banner_image ? quality.banner_image : '/quality_banner.jpg'} className="img-quality" style={{ marginTop: "10px", marginBottom: "40px" }} />
-							<p className="para font-weight-bold">
+							<p className="para font-weight-bold who-we-are-heading">
 								{quality.description}
 							</p>
 
@@ -56,10 +56,10 @@ export default function QualityPage() {
 					</div>
 
 					<div className="row" style={{ marginTop: "30px" }}>
-						<div className="col-md-8">
-	<h4 className="our-pro font-weight-bold p-5 who-we-are-heading" style={{lineHeight:'1.5em' , fontSize:'30px'}} >{quality.message.replace('hight-quality construction', ()=> `<span>Hamza</span>`)}</h4>
+						<div className="col-md-7">
+							<h4 className="our-pro font-weight-bold  who-we-are-heading" style={{lineHeight:'1.2em' , fontSize:'30px', wordSpacing:'1px'}} >{quality.message.replace('hight-quality construction', ()=> `<span>Hamza</span>`)}</h4>
 						</div>
-						<div className="col-md-4">
+						<div className="col-md-5">
 
 						</div>
 

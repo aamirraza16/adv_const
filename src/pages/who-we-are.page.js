@@ -23,9 +23,11 @@ function WhoWeArePage() {
 							<h3 className="h3-responsive who-we-are-heading aboutus font-weight-bold mt-2">{whoWeAre.primary_title}</h3>
 							<div className='row' >
 								<div className='col-sm col-md-10' >
-								<p className='font-weight-bold '>
-								{whoWeAre.primary_description}
+									<strong>
+									<p className='font-weight-bold who-we-des'>
+									{whoWeAre.primary_description}
 							</p>
+									</strong>
 								</div>
 								<div className='col-sm col-md-2' ></div>
 							</div>
@@ -35,7 +37,7 @@ function WhoWeArePage() {
 					<div className="row">
 						<div className="col-md-5 col-sm-12  tex-box" style={{ marginTop: "50px" }}>
 							<div className="inner" >
-								<h3 >{whoWeAre.ceo_message}</h3>
+								<h3 className='who-we-are-heading font-weight-bold' style={{paddingRight:'40px' , fontSize:'34px'}} >{whoWeAre.ceo_message}</h3>
 								<a href="#">CEO</a>
 							</div>
 						</div>
@@ -46,8 +48,8 @@ function WhoWeArePage() {
 
 					<div className="row contactUs-text-container">
 						<div className="col-md-12 col-sm-12">
-							<h3 className="h3-responsive  font-weight-bold">{whoWeAre.secondary_title}</h3>
-							<p className='font-weight-bold' style={{lineHeight:'2em' , paddingRight:'100px'}} >
+							<h3 className="h3-responsive who-we-are-heading  font-weight-bold" style={{fontSize:'34px'}} >{whoWeAre.secondary_title}</h3>
+							<p className='font-weight-bold who-we-are-heading' style={{lineHeight:'2em' , paddingRight:'100px'}} >
 								{whoWeAre.secondary_description}
 							</p>
 
