@@ -36,7 +36,8 @@ function TeamPage() {
                           
                         )): null} 
                 </div>
-                <section>
+            </main>
+            <section className='mb-n5' >
                 <div className="container p-0 mb-4">
                     <div className="row">
                         <div className="col-md-6 col-sm-12" style={{marginTop: "20px"}}>
@@ -50,9 +51,13 @@ function TeamPage() {
                         <img src="/main-background-small.png" className="img-fluid" />
                         </div>
                     </div>
-                </div>    
-                </section>
-            </main>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+
+            </section>
+			<hr style={{width:'95%' , marginBottom:'0px'}} />
 
             <FooterComponent />
         </div>

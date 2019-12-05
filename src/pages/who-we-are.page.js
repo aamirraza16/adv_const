@@ -69,9 +69,10 @@ function WhoWeArePage() {
 					</div>
 
 				</div> : null}
+				<br/>
+			<br/>
 			</main>
-			<br/>
-			<br/>
+			<hr style={{width:'95%' , marginBottom:'0px'}} />
 			<FooterComponent />
 		</div>
 	)

@@ -66,8 +66,9 @@ export default function QualityPage() {
 
 					</div>
 				</div> : null}
-				<hr style={{width:'95%'}}/>
+
 			</main>
+			<hr style={{width:'95%' , marginBottom:'0px'}} />
 			<FooterComponent />
 		</div>
 	)

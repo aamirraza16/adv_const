@@ -182,6 +182,7 @@ function MainPage() {
         </div>: null}
       </div>
     </main>
+    <hr style={{width:'100%' , marginBottom:'0px'}} />
       <FooterComponent></FooterComponent>
       </div>
   );

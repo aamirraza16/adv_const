@@ -6,8 +6,9 @@ import '../product-detail.css';
 import axios from 'axios';
 
 function ProductDetails(props) {
-	const [ids,setIds] = useState()
+   const [ids,setIds] = useState()
    const [product, setProduct] = useState();
+   const [nextProduct, setNextProduct] = useState();
    let { id } = useParams();
    let history = useHistory();
    const [currentId , setCurrentId] = useState(id)
@@ -15,30 +16,49 @@ function ProductDetails(props) {
 
    useEffect(() => {
 	   setIds(props.location.state.projects.map((project) =>project.id))
-	//    let p_1 = axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + currentId)
-	//    let p_2 = axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + (Number(currentId) + 1))
-	//    axios.all([p_1,p_2]).then(axios.spread((...response)=>{
-	// 	   console.log('all wala' ,response[0].data[0])
-	//    }))
-	   axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + currentId).then(res => {
-		   console.log('res chek', res.data[0]);
-		   setProduct(res.data[0]);
-	   })
+	   let p_1 = axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + currentId)
+	   let p_2 = axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + (Number(currentId) + 1))
+	   axios.all([p_1,p_2]).then(axios.spread((...response)=>{
+		   console.log('all wala' ,response[1].data[0])
+		   setProduct(response[0].data[0]);
+		   setNextProduct(response[1].data[0])
+	   }))
+	//    axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + currentId).then(res => {
+	// 	   console.log('res chek hello', res.data[0]);
+	// 	   setProduct(res.data[0]);
+	//    })
    }, [])
   const nextProject = ()=>{
 	  console.log(typeof currentId)
-	  if(currentId == ids[ids.length -1]){
-		  setDisabled(true)
-	  }else{
+	  if(currentId == ids[ids.length -1] || nextProduct.id == ids[ids.length -1]){
+		let newId = nextProduct.id
+		setCurrentId(newId)
+		history.push('/product-details/' + newId)
+		let p_1 = axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + newId)
+		let p_2 = axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + ids[0])
+		axios.all([p_1,p_2]).then(axios.spread((...response)=>{
+			console.log('all wala' ,response[1].data[0])
+			setProduct(response[0].data[0]);
+			setNextProduct(response[1].data[0])
+		}))	  
+	}else{
 		let newId = ids[ids.indexOf(Number(currentId)) + 1]
 		setCurrentId(newId)
 		history.push('/product-details/' + newId)
-		axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + newId).then(res => {
-		console.log('next res', res.data[0]);
-		setProduct(res.data[0]);
-	})
+		let p_1 = axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + newId)
+		let p_2 = axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + (Number(newId) + 1))
+		axios.all([p_1,p_2]).then(axios.spread((...response)=>{
+			console.log('all wala' ,response[1].data[0])
+			setProduct(response[0].data[0]);
+			setNextProduct(response[1].data[0])
+		}))
+	// 	axios.get('https://adv-construction.herokuapp.com/front/projectPage?id=' + newId).then(res => {
+	// 	console.log('next res', res.data[0]);
+	// 	setProduct(res.data[0]);
+	// })
 	  }
   }
+  console.log('check nextttt' ,nextProduct)
   return (
         <div>
         <HeaderComponent id='top' topclassName={"relative-top"}></HeaderComponent>
@@ -115,18 +135,24 @@ function ProductDetails(props) {
     		<div className="row" style={{marginTop: "30px"}}>
     			<div className="col-md-6 col-sm-12">
     				<div className="inner"> 
-              			<h6>{product.type}</h6>
-              			<h3 className="h3-responsive font-weight-bold">Observation</h3>
+              			<h6>{nextProduct && nextProduct.type}</h6>
+  							<h3 className="h3-responsive font-weight-bold">{nextProduct && nextProduct.name}</h3>
               			<a href="#top" disabled={isDisabled ? "disabled" : ''} onClick={() =>nextProject()} >Next Project</a>
             		</div>	
     			</div>
     			<div className="col-md-6 col-sm-12">
-    				<img src="/image4.jpg" className="img-fluid" />
+    				<img src={nextProduct && nextProduct.image} style={{width:'90%', height:'300px'}} />
     			</div>
     		</div>
 			
     	</div>
-    </main>: null}
+		<br/>
+		<br/>
+		<br/>
+		<hr style={{width:'95%' , marginBottom:'0px'}} />
+    </main>: null
+	}
+
         <FooterComponent></FooterComponent>
     </div>
 

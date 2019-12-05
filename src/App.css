@@ -149,7 +149,7 @@ header,
     margin-top: 350px;
     text-transform: uppercase;
     font-weight: bolder;
-    font-size: 21px;
+    font-size: 16px;
 
 }
 
@@ -689,7 +689,7 @@ section{
 
 .job-tabs-list{
     color: #000;
-    font-size: 15px;
+    font-size: 18px;
  
 }
 
@@ -713,4 +713,18 @@ section{
 
 .who-we-are-heading{
     font-family: 'NationWeb' !important;
+}
+
+.nav-link{
+    font-family:'NationWeb' !important;
+}
+
+.navbar-expand-md .navbar-nav .dropdown-menu {
+    position: absolute;
+    /* right: -8px; */
+    left: -127px !important;
+}
+
+.job-tabs-list li{
+    font-family: 'NationWeb' !important;  
 }

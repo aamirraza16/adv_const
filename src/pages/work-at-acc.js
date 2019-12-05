@@ -32,7 +32,7 @@ function WorkAtAccPage(props) {
                   <br />new talents</h4>
          
                 <p className="color-red" data-toggle="modal" data-target="#myModal"
-                  style={{ cursor: 'pointer' }}>Jobs and pre-requistes </p>
+                  style={{ cursor: 'pointer' , fontWeight:'bold'}}>Jobs and pre-requistes </p>
                 <form method="post" action="#" enctype="multipart/form-data">
                   <div className="form-group">
                     <label for="fullname">Full Name</label>
@@ -106,7 +106,7 @@ function WorkAtAccPage(props) {
               </div>
               <div>
                 <div>
-                <p className="font-weight-bold" style={{ fontSize: '28px' }}><span class="TextColor">We would love to have you on board,</span> We just need
+                <p className="who-we-are-heading" style={{ fontSize: '32px' , fontWeight:'700' , lineHeight:'1.2em' }}><span class="TextColor">We would love to have you on board,</span> We just need
                           to make sure that you have</p> 
                 </div>
                 <div className='container' >
@@ -120,32 +120,32 @@ function WorkAtAccPage(props) {
     <br/>
     <TabPanel>
       <ol className='job-tabs-list' >
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>Contrary to popular belief, Lorem Ipsum is not simply random</li>
+        <li>A minimum of two years experience (preferably in the contraction sector)</li>
+        <li>Profiency in spoken and written English</li>
+        <li>Dealing with applications, computer program and the internet</li>
+        <li>Skills of follow-up and communication with other</li>
+        <li>Place of workin any of the company's projects in the citifies of the kingdom</li>
+        <li>The soul</li>
       </ol>
     </TabPanel>
     <TabPanel>
     <ol className='job-tabs-list' >
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
+    <li>A minimum of two years experience (preferably in the contraction sector)</li>
+        <li>Profiency in spoken and written English</li>
+        <li>Dealing with applications, computer program and the internet</li>
+        <li>Skills of follow-up and communication with other</li>
+        <li>Place of workin any of the company's projects in the citifies of the kingdom</li>
+        <li>The soul</li>
       </ol>
     </TabPanel>
     <TabPanel>
     <ol className='job-tabs-list' >
-    <li>Contrary to popular belief, Lorem Ipsum is not simply random</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
-        <li>A Minimum two years experience</li>
+    <li>A minimum of two years experience (preferably in the contraction sector)</li>
+        <li>Profiency in spoken and written English</li>
+        <li>Dealing with applications, computer program and the internet</li>
+        <li>Skills of follow-up and communication with other</li>
+        <li>Place of workin any of the company's projects in the citifies of the kingdom</li>
+        <li>The soul</li>
       </ol>
     </TabPanel>
   </Tabs>
@@ -157,8 +157,8 @@ function WorkAtAccPage(props) {
         </div>
         <br/>
         <br/>
-        <hr style={{width:'95%'}} />
       </main>
+      <hr style={{width:'95%' , marginBottom:'0px'}} />
       <FooterComponent />
     </div>
   );
