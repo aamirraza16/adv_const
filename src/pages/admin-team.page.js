@@ -71,7 +71,7 @@ function AdminTeamPage() {
         );
     }, []);
 
-    const confirmDelete = () => {
+    const confirmDelete = () => { 
         teamService.delete(selectedTeam);
         handleClose();
     }

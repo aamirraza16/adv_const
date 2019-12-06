@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import DataTable from 'react-data-table-component';
-import Spinner from 'react-bootstrap/Spinner';
+import { Spinner, Modal, Button, Form, Col, Row } from 'react-bootstrap';
 
 import AdminHeaderComponent from '../components/admin-header.component';
 import CitiesService from '../services/cities.service';
@@ -18,15 +18,36 @@ function AdminCityPage() {
                 selector: 'name',
                 sortable: true,
                 right: true,
+            },
+            {
+                name: 'Delete',
+                right: true,
+                cell: row => <button class="btn btn-danger" onClick={() => onSelectCity(row.id)}><i class="fas fa-trash-alt"></i></button>
+            },
+            {
+                name: 'Update',
+                right: true,
+                cell: row => <button class="btn btn-info" onClick={() => onSelectEditCity(row)}><i class="fas fa-pencil-alt"></i></button>
             }
         ];
 
     const [cities, setCities] = useState();
     const [city, setCity] = useState('');
     const [isLoading, setIsLoading] = useState(true);
+    const [show, setShow] = useState(false);
+    const [name, setName] = useState('');
+    const [showEditCity, setShowEditCity] = useState(false);
+    const [selectedCity, setSelectedCity] = useState();
 
     const citiesService = new CitiesService();
-    
+
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const handleEditClose = () => setShowEditCity(false);
+    const handleEditShow = () => setShowEditCity(true);
+
     useEffect(() => {
         citiesService.getAll().then(res => { 
                 setCities(res);
@@ -38,6 +59,35 @@ function AdminCityPage() {
         citiesService.create({ name: city }).then(res => console.log('res ', res));
     }
 
+    const confirmDelete = () => { 
+        citiesService.delete(selectedCity);
+        handleClose();
+    }
+
+    const onSelectCity = (id) => {
+        setSelectedCity(id);
+        handleShow();
+    }
+
+    const onSelectEditCity = (row) => {
+        console.log('row ', row);
+        setName(row.name);
+        setSelectedCity(row.id)
+        handleEditShow();
+    }
+
+    const confirmEditCity = async () => {
+        const data = {
+            city_id: selectedCity,
+            name,
+        }
+        citiesService.updateCity(data).then(res => {
+            if (res.status === 200) {
+                setShowEditCity(false);
+            }
+        });
+        handleEditClose();
+    }
     return (
        <div>
            <AdminHeaderComponent />
@@ -86,6 +136,43 @@ function AdminCityPage() {
                     </div>
                 </div>
             </div>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                <Modal.Title>Delete City</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Are you sure you want to delete City</Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                    Cancel
+                </Button>
+                <Button variant="primary" onClick={confirmDelete}>
+                    Confirm
+                </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal size="lg" show={showEditCity} onHide={handleEditClose}>
+                <Modal.Header closeButton>
+                <Modal.Title>Update City</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                <Form>
+                    <Form.Row>
+                        <Form.Group as={Col} controlId="formGridName">
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control value={name} onChange={e => setName(e.target.value)} />
+                        </Form.Group>
+                    </Form.Row>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={handleEditClose}>
+                    Cancel
+                </Button>
+                <Button variant="primary" onClick={confirmEditCity}>
+                    Update
+                </Button>
+                </Modal.Footer>
+            </Modal>
        </div>
     )
 }

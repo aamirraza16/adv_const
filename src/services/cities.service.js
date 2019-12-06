@@ -21,6 +21,23 @@ class CitiesService {
     });
   }
   
+  delete(id) {
+    console.log('challllllaaaa' , id)
+    return axios.post(`${baseUrl}delete_cities`, querystring.stringify({ id }), {
+      headers: { 
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    }).then(res => console.log('res ', res))
+  }
+
+  updateCity(data) {
+    return axios.post(`${baseUrl}update_cities`, querystring.stringify(data), {
+      headers: { 
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    });
+  }
+
 }
 
 export default CitiesService;

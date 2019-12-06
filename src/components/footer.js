@@ -14,7 +14,6 @@ function FooterComponent(props) {
                 <li className="nav-item"><a href="#" className="nav-link icoLinkedin social-icon" title="Linkedin"><img src="/linked.png" /></a></li>
                 <li className="nav-item"><a href="#" className="nav-link icoLinkedin social-icon" title="Instagram"><img src="/instagram.png" /></a></li>
               </ul>
-
               <ul className="nav pt-3">
               <li className="nav-item">
                <Link className="nav-link" to="/">Home</Link></li>
@@ -41,13 +40,13 @@ function FooterComponent(props) {
           </div>
           <div className="col-md-4 p-3">
             <Link className="navbar-brand float-right mt-md-2" to="/">
-              <img src="/logo.png" className="img-fluid" width="220" />
+              <img src="/logo.png" className="img-fluid" style={{width:'230px' , height:'100px'}}/>
             </Link>
             
           </div>
         </div>
-
-        <div className="row border-top">
+        <hr/>
+        <div className="row ">
           <div className="col-md-5 ml-auto">
             <p className="copyRight">&copy; 1996-2020 Advance Construction Co. <span>All right Reserved</span></p>
           </div>
