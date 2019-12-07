@@ -5,8 +5,8 @@ function FooterComponent(props) {
   return (
        <footer >
          {props.children}
-      <div className="container">
-
+      <div className="container-fluid">
+        <div className='container' >
         <div className="row">
           <div className="col-md-8 p-3">
               <ul className="nav mr-auto pb-3 w-50 border-bottom">
@@ -39,11 +39,12 @@ function FooterComponent(props) {
 
           </div>
           <div className="col-md-4 p-3">
-            <Link className="navbar-brand float-right mt-md-2" to="/">
-              <img src="/logo.png" className="img-fluid" style={{width:'230px' , height:'100px'}}/>
+            <Link className="float-right mt-md-2" to="/">
+              <img src="/logo.png" className="img-fluid" style={{width:'280px' , height:'110px'}}/>
             </Link>
             
           </div>
+        </div>
         </div>
         <hr/>
         <div className="row ">

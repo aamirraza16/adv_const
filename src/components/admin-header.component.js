@@ -13,7 +13,7 @@ function AdminHeaderComponent() {
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <Link class="nav-link" style={{ color: "#fff" }} to="/admin/projects">Projects</Link>
+            <Link class="nav-link" style={{ color: "#fff" }} to="/admin/dashboard">Projects</Link>
           </li>
           <li class="nav-item">
             <Link class="nav-link" style={{ color: "#fff" }} to="/admin/teams">Teams</Link>

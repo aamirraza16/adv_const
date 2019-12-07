@@ -23,10 +23,7 @@ class CitiesService {
   
   delete(id) {
     console.log('challllllaaaa' , id)
-    return axios.post(`${baseUrl}delete_cities`, querystring.stringify({ id }), {
-      headers: { 
-        "Content-Type": "application/x-www-form-urlencoded"
-      }
+    return axios.post(`${baseUrl}delete_cities`, {city_id:id}, {
     }).then(res => console.log('res ', res))
   }
 

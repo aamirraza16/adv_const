@@ -98,29 +98,29 @@ export default function ProjectsPage() {
 
                   <div className="col-md-3">
                     <ul  className="nav nav-pills" id="myTab2" role="tablist">
-                      <li  className="nav-item p-2" 
+                      <li  className="nav-item p-2 ml-2" 
                                   style={{borderBottom:projectType === 'resort'?'3px solid #C92027':'none'}}
                                    onClick={() => onChangeProjectType("resort")}>
                       <img src="/icon0-40x40.gif" /></li>
-                      <li className="nav-item p-2"
+                      <li className="nav-item p-2 ml-2"
                               style={{borderBottom:projectType === 'building'?'3px solid #C92027':'none'}}
                                   onClick={() => onChangeProjectType("building")}>
-                        <img style={{ width: "30", height: 30 }} src="/icon1-40x40.gif" />
+                        <img style={{ width: "20", height: 20 }} src="/icon1-40x40.gif" />
                         </li>
-                      <li className="nav-item p-2" 
+                      <li className="nav-item p-2 ml-2" 
                       style={{borderBottom:projectType === 'road'?'3px solid #C92027':'none'}}
                       onClick={() => onChangeProjectType("road")}>
-                        <img style={{ width: "30", height: 30 }} src="/building.png" />
+                        <img style={{ width: "20", height: 20 }} src="/building.png" />
                       </li>
-                      <li className="nav-item p-2"
+                      <li className="nav-item p-2 ml-2"
                       style={{borderBottom:projectType === 'bridge'?'3px solid #C92027':'none'}}
                       onClick={() => onChangeProjectType("bridge")}>
-                        <img style={{ width: "30", height: 30 }} src="/icon-40x40.gif" />
+                        <img style={{ width: "20", height: 20 }} src="/icon-40x40.gif" />
                       </li>
-                      <li className="nav-item p-2" 
+                      <li className="nav-item p-2 ml-2" 
                       style={{borderBottom:projectType === 'all'?'3px solid #C92027':'none'}}
                       onClick={() => onChangeResetProjectType(selectedCity)}>
-                        <img style={{ width: "30", height: 30 }} src="/icon3-40x40.gif" />
+                        <img style={{ width: "20", height: 20 }} src="/icon3-40x40.gif" />
                       </li>
                     </ul>
                   </div>
@@ -162,7 +162,7 @@ export default function ProjectsPage() {
         <hr style={{width:'95%' , marginBottom:'0px'}} />
       </main>
       <FooterComponent></FooterComponent>
-      <Modal
+      {/* <Modal
           className='p-0'
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
@@ -191,7 +191,7 @@ export default function ProjectsPage() {
           )
           }
 
-      </Modal>
+      </Modal> */}
     </div>
   );
 }

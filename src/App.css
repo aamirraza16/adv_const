@@ -51,7 +51,7 @@ p{   font-family: 'FoundersGroteskWeb-Regular'; }
     height: 90px !important;
 }
 
-.dropdown-menu{ margin: 2rem 0 0 !important; background-color: #424242 !important; }
+.dropdown-menu{ margin: 2rem 0 0 !important; background-color: rgb(23, 22, 22) !important; }
 
 .dropdown-item:focus, .dropdown-item:hover {
     background-color: transparent !important;
