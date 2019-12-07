@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import {Link} from 'react-router-dom'
 import HeaderComponent from '../components/header.js';
 import FooterComponent from '../components/footer.js';
 import teamService from '../services/front/team.service';
@@ -44,11 +44,11 @@ function TeamPage() {
                             <div className="inner"> 
                                 <h6>Team</h6>
                                 <h3 className="h3-responsive who-we-are-heading">Delivering agile solutions to<br />complex projects</h3>
-                                <a href="#">Learn about our work</a>
+                                <Link to="/quality">Learn about our work</Link>
                             </div>
                         </div>
                         <div className="col-md-6 col-sm-12" style={{ marginTop: "20px"}}>
-                        <img src="/main-background-small.png" className="img-fluid" />
+                        <img src="/quality_banner.jpg" className="img-fluid" />
                         </div>
                     </div>
                 </div>

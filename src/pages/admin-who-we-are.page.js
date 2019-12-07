@@ -37,6 +37,7 @@ function AdminWhoWeArePage() {
     } ,[])
 
     const updateQuality = async () => {
+       
         if (selectedBannerImage) {
             let data = new FormData();
             data.append('image', selectedBannerImage);
@@ -46,7 +47,7 @@ function AdminWhoWeArePage() {
                     'content-type': 'multipart/form-data'
                 }
             });
-    
+            console.log('hola',response)
             setBannerImage(response.data);
     
            }
@@ -93,7 +94,8 @@ function AdminWhoWeArePage() {
             }
           }).then(res => console.log('res ', res))
 
-    }
+    
+        }
     return (
         <div>
             <AdminHeaderComponent />

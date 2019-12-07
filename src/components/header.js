@@ -15,7 +15,7 @@ function HeaderComponent(props) {
     <nav className={ "navbar navbar-expand-md navbar-light " + props.topclassName }>
         <div className= {window.location.pathname === '/' ?'container nav-container':'container'}>
           <Link className="navbar-brand" to="/">
-            <img src="/logo.png" className="img-logo" />
+            <img src="/logo1.png" className="img-logo" />
           </Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
