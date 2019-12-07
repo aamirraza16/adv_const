@@ -135,10 +135,10 @@ function ProductDetails(props) {
     		<div className="row" style={{marginTop: "30px"}}>
     			<div className="col-md-6 col-sm-12">
     				<div className="inner"> 
-              			<h6>{nextProduct && nextProduct.type}</h6>
-  							<h3 className="h3-responsive font-weight-bold">{nextProduct && nextProduct.name}</h3>
-              			<a href="#top" disabled={isDisabled ? "disabled" : ''} onClick={() =>nextProject()} >Next Project</a>
-            		</div>	
+					<a href="#top" disabled={isDisabled ? "disabled" : ''} onClick={() =>nextProject()} >Next Project</a>
+  					<h3 className="h3-responsive font-weight-bold">{nextProduct && nextProduct.name}</h3>
+					  <p className='text-justify' >{nextProduct && nextProduct.long_description}</p>
+					</div>	
     			</div>
     			<div className="col-md-6 col-sm-12">
     				<img src={nextProduct && nextProduct.image} style={{width:'90%', height:'300px'}} />

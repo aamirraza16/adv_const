@@ -34,28 +34,51 @@ export default function ProjectsPage() {
   }, []);
 
   const onChangeCity = city => {
-    setSelectedCity(city);
-    setCityFilteredProjects(
-      projectList.filter(project => project.city === city)
-    );
+    if(city === 'all'){
+      setSelectedCity(city);
+      setCityFilteredProjects(projectList)      
+    }else{
+      setSelectedCity(city);
+      setCityFilteredProjects(
+        projectList.filter(project => project.city === city)
+      );
+    }
     // setProjectIds(cityFilteredProjects.map(project=>project.id))
   };
 
   const onChangeProjectType = type => {
-    setProjectType(type);
-    setCityFilteredProjects(
-      projectList.filter(
-        project => project.type === type && selectedCity === project.city
-      )
-    );
+    if(selectedCity === 'all'){
+      setProjectType(type);
+      setCityFilteredProjects(
+        projectList.filter(
+          project => project.type === type
+        )
+      );
+    }else{
+      setProjectType(type);
+      setCityFilteredProjects(
+        projectList.filter(
+          project => project.type === type && selectedCity === project.city
+        )
+      );
+    }
   };
 
   const onChangeResetProjectType = reset_city => {
-    setSelectedCity(reset_city);
-    setProjectType('all')
-    setCityFilteredProjects(
-      projectList.filter(project => reset_city === project.city)
-    );
+    if(reset_city === 'all'){
+      setSelectedCity(reset_city);
+      setProjectType('all')
+      setCityFilteredProjects(
+        projectList
+      );
+    }
+    else{
+      setSelectedCity(reset_city);
+      setProjectType('all')
+      setCityFilteredProjects(
+        projectList.filter(project => reset_city === project.city)
+      );
+    }
   };
   const setCarosal = (c_project)=>{
     setCurrentProject(c_project)
@@ -81,7 +104,16 @@ export default function ProjectsPage() {
 
                   <div className="col-md-9">
                     <ul className="nav nav-pills mb-3" id="myTab" role="tablist">
-                    
+
+                    <li className="nav-item" >
+                              <a className={ selectedCity === 'all' ? "nav-link p-2 active"
+                                  : "nav-link p-2" } id="one-tab" data-toggle="tab" href="#one" 
+                                  role="tab" aria-controls='ALL' aria-selected="true"
+                                  onClick={() => onChangeCity('all')}
+                                  >
+                                ALL
+                              </a>
+                            </li>
                       {cities ? cities.map(city => (
                             <li className="nav-item" key={city.id}>
                               <a className={ selectedCity === city.name ? "nav-link p-2 active"

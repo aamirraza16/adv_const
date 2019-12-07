@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 
 function ProjectComponent(props) {
   return (
-    <div onClick={()=> props.setCarosal(props.project)} className="col-md-6 col-sm-6 mb-md-5" key={props.project.id}>
+    <div style={{cursor:'pointer'}} onClick={() => props.onClick()} className="col-md-6 col-sm-6 mb-md-5" key={props.project.id}>
       <Carousel  autoPlay={true} showThumbs={false}
         showStatus={false} infiniteLoop stopOnHover
         onClickItem={ ()=> null } >
@@ -27,5 +27,5 @@ function ProjectComponent(props) {
     </div>
   );
 }
-
+// onClick={()=> props.setCarosal(props.project)}
 export default ProjectComponent;
