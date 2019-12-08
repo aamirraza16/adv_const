@@ -15,6 +15,19 @@ class JobsService {
         }
     });
   }
+  delete(id) {
+    console.log('challllllaaaa' , id)
+    return axios.post(`${baseUrl}delete_job`, {job_id:id}, {
+    }).then(res => console.log('res ', res))
+  }
+
+  updateJob(data) {
+    return axios.post(`${baseUrl}update_job`, querystring.stringify(data), {
+      headers: { 
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    });
+  }
 }
 
 export default JobsService;

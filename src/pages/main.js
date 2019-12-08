@@ -51,7 +51,7 @@ function MainPage() {
   }
 
   return (
-      <div>
+      <div  >
       <HeaderComponent topclassName={"fixed-top-header"}>
         <div className="view" style={{ backgroundImage :"url('/banner.jpg')", backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
         <div className="mask rgba-gradient align-items-center">
@@ -67,8 +67,8 @@ function MainPage() {
         </div>
       </HeaderComponent>
 
-      <main>
-      <div className="container">
+      <main >
+      <div className="container"  >
         {(otherData && projects) ? <div className="row py-5">
 
           <div className="col-md-12 col-sm-12 text-center">

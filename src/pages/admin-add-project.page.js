@@ -70,7 +70,7 @@ function AdminAddProjectPage() {
         'mini_image2': responseMiniImage2,
         'length': arabicName
         }
-
+        
         const config = {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
@@ -154,11 +154,13 @@ function AdminAddProjectPage() {
             <div className="col-md-6">
                 <div className="form-group">
                     <label for="short_description_arabic">Type</label>
-                    <input 
-                        className="form-control" 
-                        id="short_description_arabic"
-                        value={type}
-                        onChange={e => setType(e.target.value)} />
+
+                                    <select className="form-control" id="sel1" value={type} onChange={e => setType(e.target.value)}>
+                                        <option value='bridge' >bridge</option>
+                                        <option value='resort' >resort</option>
+                                        <option value='building' >building</option>
+                                        <option value='road' >road</option>
+          `                   </select>
                 </div>
             </div>
         </div>
