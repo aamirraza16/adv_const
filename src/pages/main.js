@@ -67,7 +67,7 @@ function MainPage() {
         </div>
       </HeaderComponent>
 
-      <main >
+      <main style={{width:"91.6%",margin:'0 auto', borderRight:"1px solid #80808054",borderLeft:"1px solid #80808054"}}>
       <div className="container"  >
         {(otherData && projects) ? <div className="row py-5">
 
