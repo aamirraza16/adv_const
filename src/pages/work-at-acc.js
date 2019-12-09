@@ -131,10 +131,10 @@ function WorkAtAccPage(props) {
     <TabPanel>
     <ol className='job-tabs-list' >
     <li>A minimum of two years experience (preferably in the contraction sector)</li>
+    <li>Skills of follow-up and communication with other</li>
+        <li>Place of workin any of the company's projects in the citifies of the kingdom</li>
         <li>Profiency in spoken and written English</li>
         <li>Dealing with applications, computer program and the internet</li>
-        <li>Skills of follow-up and communication with other</li>
-        <li>Place of workin any of the company's projects in the citifies of the kingdom</li>
         <li>The soul</li>
       </ol>
     </TabPanel>
@@ -144,8 +144,8 @@ function WorkAtAccPage(props) {
         <li>Profiency in spoken and written English</li>
         <li>Dealing with applications, computer program and the internet</li>
         <li>Skills of follow-up and communication with other</li>
-        <li>Place of workin any of the company's projects in the citifies of the kingdom</li>
-        <li>The soul</li>
+        <li>Place of workin any of the company's</li>
+        <li>The soul third </li>
       </ol>
     </TabPanel>
   </Tabs>
