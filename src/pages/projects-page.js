@@ -24,10 +24,10 @@ export default function ProjectsPage() {
       console.log("res check", res);
       setProjectList(res[0]);
       setCitites(res[1]);
-      setSelectedCity(res[1][0].name);
+      setSelectedCity('all');
       setProjectType('all')
       setCityFilteredProjects(
-        res[0].filter(project => project.city === res[1][1].name)
+        res[0]
       );
     });
 
