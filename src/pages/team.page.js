@@ -42,7 +42,7 @@ function TeamPage() {
                     <div className="row">
                         <div className="col-md-6 col-sm-12" style={{marginTop: "20px"}}>
                             <div className="inner"> 
-                                <h6>Team</h6>
+                                <h6>Quality</h6>
                                 <h3 className="h3-responsive who-we-are-heading">Delivering agile solutions to<br />complex projects</h3>
                                 <Link to="/quality">Learn about our work</Link>
                             </div>

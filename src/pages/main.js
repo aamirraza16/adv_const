@@ -53,7 +53,7 @@ function MainPage() {
   return (
       <div  >
       <HeaderComponent topclassName={"fixed-top-header"}>
-        <div className="view" style={{ backgroundImage :"url('/banner.jpg')", backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
+        <div className="view" style={{ backgroundImage :"url('/bannerr.jpg')", backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
         <div className="mask rgba-gradient align-items-center">
             <div className="container">
             <div className="row header-text">
@@ -67,7 +67,7 @@ function MainPage() {
         </div>
       </HeaderComponent>
 
-      <main style={{width:"91.6%",margin:'0 auto', borderRight:"1px solid #80808054",borderLeft:"1px solid #80808054"}}>
+      <main >
       <div className="container"  >
         {(otherData && projects) ? <div className="row py-5">
 
@@ -142,7 +142,7 @@ function MainPage() {
           <div className="col-md-4 col-sm-12 box" style={{marginTop: "100px"}}>
             <div className="inner">
               <div className="icon">
-              <img src={otherData.service_1_icon} className="img-fluid" />
+              <img src={otherData.service_1_icon} className="main-page-icon" />
               </div> 
               <h3 className="h3-responsive font-weight-bold" style={{fontSize:"20px"}}>{otherData.service_1_title}</h3>
               <p>{otherData.service_1_desc}</p>
@@ -151,7 +151,7 @@ function MainPage() {
           <div className="col-md-4 col-sm-12 box" style={{marginTop: "100px"}}>
             <div className="inner">
               <div className="icon">
-                <img src={otherData.service_2_icon} className="img-fluid" />
+                <img src={otherData.service_2_icon} className="main-page-icon" />
               </div>
               <h3 className="h3-responsive font-weight-bold" style={{fontSize:"20px"}}>{otherData.service_2_title}</h3>
               <p>{otherData.service_2_desc}g</p>
@@ -160,7 +160,7 @@ function MainPage() {
           <div className="col-md-4 col-sm-12 " style={{marginTop: "100px"}}>
             <div className="inner">
               <div className="icon">
-                <img src={otherData.service_3_icon} className="img-fluid" />
+                <img src={otherData.service_3_icon} className="main-page-icon" />
               </div>
               <h3 className="h3-responsive font-weight-bold" style={{fontSize:"20px"}}>{otherData.service_3_title}</h3>
               <p>{otherData.service_3_desc}</p>

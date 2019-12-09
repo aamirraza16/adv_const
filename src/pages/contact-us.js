@@ -36,6 +36,10 @@ const ContactUsPage = () => {
     	</div>
 		<br/>
 		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
     </main>
         <FooterComponent>
 			<hr />

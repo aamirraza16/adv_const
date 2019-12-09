@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 function ProjectComponent(props) {
   return (
     <div style={{cursor:'pointer'}} onClick={() => props.onClick()} className="col-md-6 col-sm-6 mb-md-5" key={props.project.id}>
-      <Carousel  autoPlay={true} showThumbs={false}
+      <Carousel  autoPlay={false} showThumbs={false}
         showStatus={false} infiniteLoop stopOnHover
         onClickItem={ ()=> null } >
         <div>

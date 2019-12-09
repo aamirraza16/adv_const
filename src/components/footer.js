@@ -10,9 +10,9 @@ function FooterComponent(props) {
         <div className="row">
           <div className="col-md-8 p-3">
               <ul className="nav mr-auto pb-3 w-50 border-bottom">
-                <li className="nav-item"><a href="#" className="nav-link icoFacebook social-icon" title="Facebook"><img src="/fb.png" /></a></li>
-                <li className="nav-item"><a href="#" className="nav-link icoLinkedin social-icon" title="Linkedin"><img src="/linked.png" /></a></li>
-                <li className="nav-item"><a href="#" className="nav-link icoLinkedin social-icon" title="Instagram"><img src="/instagram.png" /></a></li>
+                <li className="nav-item"><a target="_blank" href="https://www.facebook.com/advancedconstructionsa/" className="nav-link icoFacebook social-icon" title="Facebook"><img src="/fb.png" /></a></li>
+                <li className="nav-item"><a target="_blank" href="https://www.linkedin.com/mwlite/company/advanced-construction-company-for-contracting-maintenance" className="nav-link icoLinkedin social-icon" title="Linkedin"><img src="/linked.png" /></a></li>
+                <li className="nav-item"><a target="_blank"  href="https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.instagram.com/advancedconstruction_co/%3Figshid%3D8pkwlxt6am2h&ved=2ahUKEwjHmu_8zaXmAhWLmBQKHa6eB18QFjAAegQIAxAB&usg=AOvVaw3N4xeaT-JBfOTZnoSYy4hL" className="nav-link icoLinkedin social-icon" title="Instagram"><img src="/instagram.png" /></a></li>
               </ul>
               <ul className="nav pt-3">
               <li className="nav-item">
