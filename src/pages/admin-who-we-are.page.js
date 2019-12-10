@@ -35,10 +35,9 @@ function AdminWhoWeArePage() {
             setWorkWithUsImage(res.data[0].work_with_us_image);
         })
     } ,[])
-
     const updateQuality = async () => {
-        if (setSelectedBannerImage) {
-            console.log('selected' ,selectedBannerImage)
+        if (selectedBannerImage) {
+            console.log('selecteddd' ,selectedBannerImage)
          let data = new FormData();
          data.append('image', selectedBannerImage);
  
@@ -48,7 +47,24 @@ function AdminWhoWeArePage() {
              }
          });
          console.log('holaaa ' , response)
-         setSelectedBannerImage(response.data);
+         setBannerImage(response.data);
+         const finalResponse = await axios.post(`${url}admin/update_who_we_are_page`, querystring.stringify({
+            primary_title: title,
+            banner_image :response.data,
+            primary_description: description,
+            ceo_message:ceoMessage,
+            ceo_message_image: ceoMessageImage,
+            secondary_title: secondaryTitle,
+            work_with_us_title: workWithUsTitle,
+            work_with_us_image: workWithUsImage,
+            secondary_description: secondaryDescription
+
+        }), {
+            headers: { 
+              "Content-Type": "application/x-www-form-urlencoded"
+            }
+          })
+          console.log(finalResponse , 'final response')
         }
            if (selectedCeoMessageImage) {
             let data = new FormData();
@@ -61,6 +77,23 @@ function AdminWhoWeArePage() {
             });
     
             setCeoMesageImage(response.data);
+            const finalResponse = await axios.post(`${url}admin/update_who_we_are_page`, querystring.stringify({
+                primary_title: title,
+                banner_image :bannerImage,
+                primary_description: description,
+                ceo_message:ceoMessage,
+                ceo_message_image: response.data,
+                secondary_title: secondaryTitle,
+                work_with_us_title: workWithUsTitle,
+                work_with_us_image: workWithUsImage,
+                secondary_description: secondaryDescription
+    
+            }), {
+                headers: { 
+                  "Content-Type": "application/x-www-form-urlencoded"
+                }
+              })
+              console.log(finalResponse , 'final response')
            }
 
            if (setSelectedWorkWithUsImage) {
@@ -74,25 +107,24 @@ function AdminWhoWeArePage() {
             });
     
             setWorkWithUsImage(response.data);
+            const finalResponse = await axios.post(`${url}admin/update_who_we_are_page`, querystring.stringify({
+                primary_title: title,
+                banner_image :bannerImage,
+                primary_description: description,
+                ceo_message:ceoMessage,
+                ceo_message_image: ceoMessageImage,
+                secondary_title: secondaryTitle,
+                work_with_us_title: workWithUsTitle,
+                work_with_us_image: response.data,
+                secondary_description: secondaryDescription
+    
+            }), {
+                headers: { 
+                  "Content-Type": "application/x-www-form-urlencoded"
+                }
+              })
+              console.log(finalResponse , 'final response')
            }
-    
-           axios.post(`${url}admin/update_who_we_are_page`, querystring.stringify({
-            primary_title: title,
-            banner_image :bannerImage,
-            primary_description: description,
-            ceo_message:ceoMessage,
-            ceo_message_image: ceoMessageImage,
-            secondary_title: secondaryTitle,
-            work_with_us_title: workWithUsTitle,
-            work_with_us_image: workWithUsImage,
-            secondary_description: secondaryDescription
-    
-        }), {
-            headers: { 
-              "Content-Type": "application/x-www-form-urlencoded"
-            }
-          }).then(res => console.log('res ', res))
-
     
         }
     return (

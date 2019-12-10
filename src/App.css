@@ -157,7 +157,7 @@ header,
 }
 
 .wow h1{
-    font-family: 'Arial Narrow' !important;
+    font-family: 'FoundersGroteskWeb-Regular' !important;
     margin-left: 160px;
     word-spacing: 0.5em;
 }
@@ -755,5 +755,5 @@ section{
 }
 
 .icon-li{
-    height: 43px;
+    height: 50px;
 }
