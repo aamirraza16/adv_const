@@ -131,27 +131,27 @@ export default function ProjectsPage() {
 
                   <div className="col-md-3">
                     <ul  className="nav nav-pills" id="myTab2" role="tablist">
-                      <li  className="nav-item p-2 ml-2" 
-                                  style={{borderBottom:projectType === 'bridge'?'3px solid #C92027':'none'}}
+                      <li  className="nav-item p-2 ml-2 icon-li" 
+                                  style={{borderBottom:projectType === 'bridge'?'4px solid #C92027':'none'}}
                                    onClick={() => onChangeProjectType("bridge")}>
                       <img src="/icon0-40x40.gif" /></li>
-                      <li className="nav-item p-2 ml-2"
-                              style={{borderBottom:projectType === 'resort'?'3px solid #C92027':'none'}}
+                      <li className="nav-item p-2 ml-2 icon-li"
+                              style={{borderBottom:projectType === 'resort'?'4px solid #C92027':'none'}}
                                   onClick={() => onChangeProjectType("resort")}>
                         <img style={{ width: "20", height: 20 }} src="/icon1-40x40.gif" />
                         </li>
-                      <li className="nav-item p-2 ml-2" 
-                      style={{borderBottom:projectType === 'building'?'3px solid #C92027':'none'}}
+                      <li className="nav-item p-2 ml-2 icon-li" 
+                      style={{borderBottom:projectType === 'building'?'4px solid #C92027':'none'}}
                       onClick={() => onChangeProjectType("building")}>
                         <img style={{ width: "20", height: 20 }} src="/building.png" />
                       </li>
-                      <li className="nav-item p-2 ml-2"
-                      style={{borderBottom:projectType === 'road'?'3px solid #C92027':'none'}}
+                      <li className="nav-item p-2 ml-2 icon-li"
+                      style={{borderBottom:projectType === 'road'?'4px solid #C92027':'none'}}
                       onClick={() => onChangeProjectType("road")}>
                         <img style={{ width: "20", height: 20 }} src="/icon-40x40.gif" />
                       </li>
-                      <li className="nav-item p-2 ml-2" 
-                      style={{borderBottom:projectType === 'all'?'3px solid #C92027':'none'}}
+                      <li className="nav-item p-2 ml-2 icon-li" 
+                      style={{borderBottom:projectType === 'all'?'4px solid #C92027':'none'}}
                       onClick={() => onChangeResetProjectType(selectedCity)}>
                         <img style={{ width: "20", height: 20 }} src="/icon3-40x40.gif" />
                       </li>

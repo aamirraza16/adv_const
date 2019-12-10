@@ -37,20 +37,19 @@ function AdminWhoWeArePage() {
     } ,[])
 
     const updateQuality = async () => {
-       
-        if (selectedBannerImage) {
-            let data = new FormData();
-            data.append('image', selectedBannerImage);
-    
-            const response = await axios.post(`${url}admin/upload`, data, {
-                headers: {
-                    'content-type': 'multipart/form-data'
-                }
-            });
-            console.log('hola',response)
-            setBannerImage(response.data);
-    
-           }
+        if (setSelectedBannerImage) {
+            console.log('selected' ,selectedBannerImage)
+         let data = new FormData();
+         data.append('image', selectedBannerImage);
+ 
+         const response = await axios.post(`${url}admin/upload`, data, {
+             headers: {
+                 'content-type': 'multipart/form-data'
+             }
+         });
+         console.log('holaaa ' , response)
+         setSelectedBannerImage(response.data);
+        }
            if (selectedCeoMessageImage) {
             let data = new FormData();
             data.append('image', selectedCeoMessageImage);

@@ -144,13 +144,22 @@ header,
     
 }
 
+
+
 .wow h6 {
+    font-family: 'FoundersGroteskWeb-Regular';
     line-height: 1.7;
     margin-top: 350px;
+    margin-left: 160px;
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 16px;
+}
 
+.wow h1{
+    font-family: 'Arial Narrow' !important;
+    margin-left: 160px;
+    word-spacing: 0.5em;
 }
 
 h3, h6{
@@ -743,4 +752,8 @@ section{
 .main-page-icon{
     width: 70px;
     height: 70px;
+}
+
+.icon-li{
+    height: 43px;
 }

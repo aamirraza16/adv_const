@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import HeaderComponent from '../components/header';
 import FooterComponent from '../components/footer';
 import whoWeAreService from '../services/front/who-we-are.service';
+import {Link} from 'react-router-dom';
 
 function WhoWeArePage() {
 	const [whoWeAre, setWhoWeAre] = useState();
@@ -65,7 +66,7 @@ function WhoWeArePage() {
 							<div className="inner">
 								<h6 className='pl-5' >Work With Us</h6>
 								<h3 className="h3-responsive font-weight-bold pl-5 pr-5">{whoWeAre.work_with_us_title}</h3>
-								<a href="#" className='pl-5 mt-3' >Apply now</a>
+								<Link to="/work-at-acc" className='pl-5 mt-3' >Apply now</Link>
 							</div>
 						</div>
 					</div>

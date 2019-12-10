@@ -51,7 +51,7 @@ function MainPage() {
   }
 
   return (
-      <div  >
+      <div >
       <HeaderComponent topclassName={"fixed-top-header"}>
         <div className="view" style={{ backgroundImage :"url('/bannerr.jpg')", backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
         <div className="mask rgba-gradient align-items-center">
