@@ -755,5 +755,45 @@ section{
 }
 
 .icon-li{
-    height: 50px;
+    height: 46px;
+    margin-top: -15px;
 }
+
+.city-inline{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.all-img{
+    width: 36px !important;
+    height: 30px !important;
+}
+.road-img{
+    width: 33px !important;
+    height: 35px !important;
+    margin-top: -10px;
+}
+.building-img{
+    width: 34px !important;
+    height: 38px !important;
+    margin-top: -14px; 
+}
+.marine-img{
+    width: 46px !important;    
+}
+.bridge-img{
+    width: 46px !important;
+}
+
+@media only screen and (max-width: 800px) {
+    .city-inline{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0px;
+    }
+  }

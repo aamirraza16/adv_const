@@ -99,11 +99,11 @@ export default function ProjectsPage() {
                 </h3>
               </div>
             </div>
-            <div className="col-md-12 col-sm-12">
+          </div>
 
-                <div className="row">
+                <div className='city-inline'>
 
-                  <div className="col-md-9">
+                  <div >
                     <ul className="nav nav-pills mb-3" id="myTab" role="tablist">
 
                     <li className="nav-item" >
@@ -129,31 +129,31 @@ export default function ProjectsPage() {
                     </ul>
                   </div>
 
-                  <div className="col-md-3">
+                  <div >
                     <ul  className="nav nav-pills" id="myTab2" role="tablist">
-                      <li  className="nav-item p-2 ml-2 icon-li" 
+                      <li  className="nav-item  ml-4  icon-li" 
                                   style={{borderBottom:projectType === 'bridge'?'4px solid #C92027':'none'}}
                                    onClick={() => onChangeProjectType("bridge")}>
-                      <img style={{width:'30px' , height:'50px'}} src="/icon0-40x40.gif" /></li>
-                      <li className="nav-item p-2 ml-2 icon-li"
-                              style={{borderBottom:projectType === 'resort'?'4px solid #C92027':'none'}}
-                                  onClick={() => onChangeProjectType("resort")}>
-                        <img style={{width:'30px' , height:'45px'}} src="/Marine.png" />
+                      <img  src="/civil.png" className='bridge-img'  /></li>
+                      <li className="nav-item  ml-4  icon-li"
+                              style={{borderBottom:projectType === 'marine'?'4px solid #C92027':'none'}}
+                                  onClick={() => onChangeProjectType("marine")}>
+                        <img src="/pr-icon-2.png " className='marine-img' />
                         </li>
-                      <li className="nav-item p-2 ml-2 icon-li" 
+                      <li className="nav-item  ml-4  icon-li" 
                       style={{borderBottom:projectType === 'building'?'4px solid #C92027':'none'}}
                       onClick={() => onChangeProjectType("building")}>
-                        <img style={{width:'20px' , height:'30px'}} src="/pr-icon-1.png" />
+                        <img  src="/pr-icon-1.png" className='building-img' />
                       </li>
-                      <li className="nav-item p-2 ml-2 icon-li"
+                      <li className="nav-item  ml-4  icon-li"
                       style={{borderBottom:projectType === 'road'?'4px solid #C92027':'none'}}
                       onClick={() => onChangeProjectType("road")}>
-                        <img style={{width:'20px' , height:'30px'}} src="/pr-icon-4.png" />
+                        <img src="/pr-icon-4.png" className='road-img' />
                       </li>
-                      <li className="nav-item p-2 ml-2 icon-li" 
+                      <li className="nav-item  ml-4  icon-li" 
                       style={{borderBottom:projectType === 'all'?'4px solid #C92027':'none'}}
                       onClick={() => onChangeResetProjectType(selectedCity)}>
-                        <img style={{width:'20px' , height:'30px'}} src="/icon3-40x40.gif" />
+                        <img  src="/icon.png" className='all-img' />
                       </li>
                     </ul>
                   </div>
@@ -183,15 +183,10 @@ export default function ProjectsPage() {
                 </div>
  
              
-            </div> 
 
-         
-            {/*<div className="col-md-12 border">
-              <button className="btn btn-block">Load more   A JSX comment </button>
-            </div>*/}
 
           </div>
-        </div>
+ 
         <hr style={{width:'95%' , marginBottom:'0px'}} />
       </main>
       <FooterComponent></FooterComponent>

@@ -231,7 +231,7 @@ function AdminDashboardPage() {
                         <Form.Label>Type</Form.Label>
                         <select className="form-control" id="sel1" value={type} onChange={e => setType(e.target.value)}>
                                         <option value='bridge' >bridge</option>
-                                        <option value='resort' >resort</option>
+                                        <option value='marine' >marine</option>
                                         <option value='building' >building</option>
                                         <option value='road' >road</option>
           `                   </select>

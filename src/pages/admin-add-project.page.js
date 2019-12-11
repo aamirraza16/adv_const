@@ -84,6 +84,7 @@ function AdminAddProjectPage() {
         })
 
     }
+    console.log(type)
     return (
         <div className="bg-light">
         <AdminHeaderComponent />
@@ -155,12 +156,12 @@ function AdminAddProjectPage() {
                 <div className="form-group">
                     <label for="short_description_arabic">Type</label>
 
-                                    <select className="form-control" id="sel1" value={type} onChange={e => setType(e.target.value)}>
+                             <select className="form-control" id="sel1" value={type} onChange={e => setType(e.target.value)}>
                                         <option value='bridge' >bridge</option>
-                                        <option value='resort' >resort</option>
+                                        <option value='marine' >marine</option>
                                         <option value='building' >building</option>
                                         <option value='road' >road</option>
-          `                   </select>
+                             </select>
                 </div>
             </div>
         </div>
