@@ -18,6 +18,7 @@ export default function ProjectsPage() {
   const [projectType, setProjectType] = useState();
   const [currentProject , setCurrentProject] = useState(null)
   const [show, setShow] = useState(false);
+  const [isLoading , setIsLoading] = useState(true)
 
   useEffect(() => {
     Promise.all([projectService.getAll(), ciitesService.getAll()]).then(res => {
@@ -29,6 +30,7 @@ export default function ProjectsPage() {
       setCityFilteredProjects(
         res[0]
       );
+      setIsLoading(false)
     });
 
   }, []);
@@ -129,7 +131,7 @@ export default function ProjectsPage() {
                     </ul>
                   </div>
 
-                  <div >
+                  <div  className='align-self-end' >
                     <ul  className="nav nav-pills" id="myTab2" role="tablist">
                       <li  className="nav-item  ml-4  icon-li" 
                                   style={{borderBottom:projectType === 'bridge'?'4px solid #C92027':'none'}}
@@ -165,7 +167,7 @@ export default function ProjectsPage() {
                     aria-labelledby="one-tab">
                     <div className="container">
                       <div className="row">
-                        {cityFilteredProjects && cityFilteredProjects.length ? (
+                        {isLoading ? 'Loading........' : cityFilteredProjects && cityFilteredProjects.length ? (
                          cityFilteredProjects.map(project => (
                             <ProjectComponent
                             setCarosal={setCarosal}

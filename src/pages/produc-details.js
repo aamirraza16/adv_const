@@ -103,7 +103,7 @@ function ProductDetails(props) {
     			</div>
     			<div className="col-md-4 col-sm-12">
     				<div className="content content1">
-    					<h6>{product.length + ' K'} </h6>
+    					<h6>{product.length} </h6>
     					<p>
     						<strong>Kilometers</strong>
     					</p>

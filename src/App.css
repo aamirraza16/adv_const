@@ -156,12 +156,6 @@ header,
     font-size: 16px;
 }
 
-.wow h1{
-    font-family: 'FoundersGroteskWeb-Regular' !important;
-    margin-left: 160px;
-    word-spacing: 0.5em;
-}
-
 h3, h6{
     font-weight: normal;
 }
@@ -746,7 +740,12 @@ section{
 }
 
 .main-page-h1{
-    font-size: 48px;
+    color: white !important;
+    font-size: 60px;
+    font-family: 'FoundersGroteskWeb-Regular' !important;
+    margin-left: 160px;
+    word-spacing: 0.2em;
+    line-height: 50px !important;
 }
 
 .main-page-icon{
@@ -760,9 +759,10 @@ section{
 }
 
 .city-inline{
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 0px;
 }
@@ -787,13 +787,3 @@ section{
 .bridge-img{
     width: 46px !important;
 }
-
-@media only screen and (max-width: 800px) {
-    .city-inline{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 0px;
-    }
-  }
