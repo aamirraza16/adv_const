@@ -59,7 +59,7 @@ function MainPage() {
             <div className="row header-text">
                 <div className="col-md-12 white-text text-center text-md-left mt-xl-5 mb-5 wow">
                 <h6 >What we do</h6>
-                <p className="main-page-h1">Facing new challenges with<br />excellent and innovation</p>
+                <p className="main-page-h1">Facing new challenges with<br />excellence and innovation</p>
                 </div>
             </div>
             </div>
