@@ -136,26 +136,27 @@ export default function ProjectsPage() {
                       <li  className="nav-item  ml-4  icon-li" 
                                   style={{borderBottom:projectType === 'bridge'?'4px solid #C92027':'none'}}
                                    onClick={() => onChangeProjectType("bridge")}>
-                      <img  src="/civil.png" className='bridge-img'  /></li>
+                      {projectType === 'bridge' ?<img  src="/5.png" className='bridge-img'  /> :<img  src="/civil.png" className='bridge-img'  />}
+                      </li>
                       <li className="nav-item  ml-4  icon-li"
                               style={{borderBottom:projectType === 'marine'?'4px solid #C92027':'none'}}
                                   onClick={() => onChangeProjectType("marine")}>
-                        <img src="/pr-icon-2.png " className='marine-img' />
+                       {projectType === 'marine' ?<img src="/3.png " className='marine-img' /> :<img src="/pr-icon-2.png " className='marine-img' />}
                         </li>
                       <li className="nav-item  ml-4  icon-li" 
                       style={{borderBottom:projectType === 'building'?'4px solid #C92027':'none'}}
                       onClick={() => onChangeProjectType("building")}>
-                        <img  src="/pr-icon-1.png" className='building-img' />
+                        {projectType === 'building' ?<img  src="/2.png" className='building-img' />: <img  src="/pr-icon-1.png" className='building-img' />}
                       </li>
                       <li className="nav-item  ml-4  icon-li"
                       style={{borderBottom:projectType === 'road'?'4px solid #C92027':'none'}}
                       onClick={() => onChangeProjectType("road")}>
-                        <img src="/pr-icon-4.png" className='road-img' />
+                      {projectType === 'road' ? <img src="/1.png" className='road-img' />:<img src="/pr-icon-4.png" className='road-img' />}
                       </li>
                       <li className="nav-item  ml-4  icon-li" 
                       style={{borderBottom:projectType === 'all'?'4px solid #C92027':'none'}}
                       onClick={() => onChangeResetProjectType(selectedCity)}>
-                        <img  src="/icon.png" className='all-img' />
+                       {projectType === 'all' ?<img  src="/4.png" className='all-img' />: <img  src="/icon.png" className='all-img' />}
                       </li>
                     </ul>
                   </div>
