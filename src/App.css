@@ -716,7 +716,11 @@ section{
 .who-we-are-heading{
     font-family: 'NationWeb' !important;
 }
-
+.who-h1{
+    font-family: 'NationWeb' !important;
+    font-weight: bold !important;
+    font-size: 34px !important;
+}
 .nav-link{
     font-family:'NationWeb' !important;
 }

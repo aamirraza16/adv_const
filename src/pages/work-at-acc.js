@@ -20,7 +20,7 @@ function WorkAtAccPage(props) {
   }, []);
   
   return (
-    <div style={{ background: '#fff' }}>
+    <div id='top' style={{ background: '#fff' }}>
       <HeaderComponent />
       <main style={{ background: '#fff' }} className="mb-md-4 mt-md-4">
         <div className="container">

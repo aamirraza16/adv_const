@@ -135,7 +135,7 @@ function MainPage() {
             <div className="inner" style={{height:"340px"}}>
               <h6>Work With Us</h6>
               <h3 className="h3-responsive font-weight-bold">Join Our Community of qualified professionals</h3>
-              <Link className="nav-link" to="/work-at-acc" >Apply now</Link>
+              <Link className="nav-link" to="/work-at-acc/#top" >Apply now</Link>
             </div> 
           </div>
 

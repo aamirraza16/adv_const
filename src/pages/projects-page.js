@@ -114,7 +114,7 @@ export default function ProjectsPage() {
                                   role="tab" aria-controls='ALL' aria-selected="true"
                                   onClick={() => onChangeCity('all')}
                                   >
-                                ALL
+                                {isLoading ? '':'ALL'}
                               </a>
                             </li>
                       {cities ? cities.map(city => (
