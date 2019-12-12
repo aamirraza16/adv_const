@@ -16,24 +16,24 @@ function FooterComponent(props) {
               </ul>
               <ul className="nav pt-3">
               <li className="nav-item">
-               <Link className="nav-link" to="/">Home</Link></li>
+               <Link style={{color:'black'}}  className="nav-link" to="/">Home</Link></li>
               <li className="nav-item">
-                <Link className="nav-link" to="/who-we-are">Who We Are</Link>
+                <Link style={{color:'black'}} className="nav-link" to="/who-we-are">Who We Are</Link>
               </li>
               <li className="nav-item">
-                 <Link className="nav-link" to="/quality">Quality</Link>
+                 <Link style={{color:'black'}} className="nav-link" to="/quality">Quality</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/team">Team</Link>
+                <Link style={{color:'black'}} className="nav-link" to="/team">Team</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/work-at-acc">Work At Acc</Link>
+                <Link style={{color:'black'}} className="nav-link" to="/work-at-acc">Work At Acc</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">Projects</Link>
+                <Link style={{color:'black'}} className="nav-link" to="/projects">Projects</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact-us">Contact Us</Link>
+                <Link style={{color:'black'}} className="nav-link" to="/contact-us">Contact Us</Link>
               </li>
             </ul>
 
@@ -49,7 +49,7 @@ function FooterComponent(props) {
         <hr/>
         <div className="row ">
           <div className="col-md-5 ml-auto">
-            <p className="copyRight">&copy; 1996-2020 Advance Construction Co. <span>All right Reserved</span></p>
+            <p style={{color:'black'}} className="copyRight">&copy; 1996-2020 Advance Construction Co. <span>All right Reserved</span></p>
           </div>
         </div>
 

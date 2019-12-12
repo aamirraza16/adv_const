@@ -51,7 +51,7 @@ p{   font-family: 'FoundersGroteskWeb-Regular'; }
     height: 90px !important;
 }
 
-.dropdown-menu{ margin: 2rem 0 0 !important; background-color: rgb(23, 22, 22) !important; }
+.dropdown-menu{ margin: 2rem 0 0 !important; background-color: #000000 !important; }
 
 .dropdown-item:focus, .dropdown-item:hover {
     background-color: transparent !important;
@@ -772,18 +772,21 @@ section{
 .all-img{
     width: 36px !important;
     height: 30px !important;
+    margin-top: -5px !important;
+
 }
 .road-img{
     width: 33px !important;
     height: 35px !important;
-    margin-top: -10px;
+    margin-top: -15px !important;
 }
 .building-img{
     width: 34px !important;
     height: 38px !important;
-    margin-top: -14px; 
+    margin-top: -18px !important;
 }
 .marine-img{
+    margin-bottom: 3px !important;
     width: 46px !important;    
 }
 .bridge-img{
