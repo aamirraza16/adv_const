@@ -49,6 +49,7 @@ p{   font-family: 'FoundersGroteskWeb-Regular'; }
 .navbar-brand img{ 
     width: 220px !important;  
     height: 90px !important;
+    margin-left: 25px !important;
 }
 
 .dropdown-menu{ margin: 2rem 0 0 !important; background-color: #000000 !important; }
@@ -770,25 +771,27 @@ section{
 }
 
 .all-img{
-    width: 36px !important;
-    height: 30px !important;
-    margin-top: -5px !important;
+    width: 38px !important;
+    height: 37px !important;
+    margin-top: -12px !important;
 
 }
 .road-img{
-    width: 33px !important;
-    height: 35px !important;
-    margin-top: -15px !important;
+    width: 38px !important;
+    height: 43px !important;
+    margin-top: -22px !important;
 }
 .building-img{
-    width: 34px !important;
+    width: 38px !important;
     height: 38px !important;
-    margin-top: -18px !important;
+    margin-top: -19px !important;
 }
 .marine-img{
-    margin-bottom: 3px !important;
-    width: 46px !important;    
+    width: 57px !important;
+    height: 28px !important;
+    margin-top: -9px !important;
 }
 .bridge-img{
-    width: 46px !important;
+    width: 57px !important;
+    margin-top: -1px !important;
 }
