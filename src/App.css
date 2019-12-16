@@ -796,3 +796,19 @@ section{
     width: 57px !important;
     margin-top: -1px !important;
 }
+
+@media (max-width: 1440px){
+    .work-at-acc-h4{
+        font-size: 1.9em !important;
+    }
+}
+@media (max-width: 1050px){
+    .work-at-acc-h4{
+        font-size: 1.7em !important;
+    }
+}
+@media (max-width: 800px){
+    .work-at-acc-h4{
+        font-size: 1.2em !important;
+    }
+}
